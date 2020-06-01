@@ -1,0 +1,202 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+body {
+	/* Делает подчеркивание с помощью underline необрывистым (там где это работает). */
+	text-decoration-skip: objects;
+
+	/* Определяет как браузеру оптимизировать рендеринг текста.
+	** качественное отображение важнее скорости, разрешает кернинг и лигатуры. */
+	text-rendering: optimizeLegibility;
+
+	/* запретить корректировку размера шрифта после изменения ориентации в iOS. */
+	// stylelint-disable-next-line
+	-webkit-text-size-adjust: 100%;
+
+	/* делает текст более тонким в Сафари на Маках,
+	** начертание сглаженное и четкое одновременно, приятно читать. */
+	// stylelint-disable-next-line
+	-webkit-font-smoothing: antialiased;
+
+	/* убирает синее подсвечивание при клике на девайсах. */
+	// stylelint-disable-next-line
+	-webkit-tap-highlight-color: transparent;
+	background-color: #f0f0f0;
+	font-family: 'Roboto';
+	font-weight: 400;
+	margin: 0;
+}
+
+button:not([disabled]),
+a[role="button"]:not([disabled]) {
+	cursor: pointer;
+}
+
+.block {
+	width: 660px;
+	height: 250px;
+	margin: 2px auto;
+	position: relative;
+}
+
+.body-start {
+	background-image: url(../images/sprites/png/Layer_3.png);
+	margin-top: 60px;
+	display: flex;
+}
+
+.content {
+	background-image: url(../images/sprites/png/Layer_3_copy.png);
+	padding: 36px 49px 38px 20px;
+}
+
+.body-end {
+	background-image: url(../images/sprites/png/Layer_3_copy_2.png);
+	margin-bottom: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.body-end h3 {
+	width: 204px;
+}
+
+.ava {
+	margin: 30px 0 0 20px;
+}
+
+.form {
+	padding: 30px 20px 32px 21px;
+	margin: -30px 0;
+	width: 100%;
+}
+
+.form input {
+	background: none;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	color: #666;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 22.01px;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	width: 100%;
+	padding: 7px 0;
+}
+
+.approved {
+	position: absolute;
+	right: 2px;
+	bottom: 9px;
+}
+
+.head {
+	color: #010101;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22.01px;
+}
+
+.skills {
+	display: flex;
+	margin: 0 -4rem 0 2rem;
+}
+
+.skills div {
+	flex: 0 0 25%;
+}
+
+.footer__red:focus,
+.footer__red:valid {
+	border: 1px solid #CB0037;
+	margin-bottom: 2px;
+}
+
+.footer__redtext {
+	display: none;
+	margin-top: 9px;
+}
+
+.footer__red:focus~.footer__redtext,
+.footer__red:valid~.footer__redtext {
+	color: #CB0037;
+	display: block;
+}
+
+.checkbox input {
+	z-index: -1;
+	opacity: 0;
+}
+
+input:checked+.checkbox__text:after {
+	background: url(../images/sprites/png/2-layers.png) no-repeat center;
+}
+
+.checkbox__text {
+	cursor: pointer;
+	position: relative;
+	color: #666;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 22.01px;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+}
+
+.checkbox__text:after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: #eee;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	position: absolute;
+	left: -28px;
+}
+
+.numb {
+	width: 56px;
+	height: 37px;
+	color: #0093d7;
+	font-family: "Roboto - Black";
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 22.01px;
+	letter-spacing: 2.5px;
+}
+
+.level {
+	position: relative;
+	margin-left: 20px;
+}
+
+.arrow {
+	position: absolute;
+	right: 50%;
+	bottom: -1rem;
+}
+
+.statics {
+	margin-left: 65px;
+	margin-bottom: 17px;
+}

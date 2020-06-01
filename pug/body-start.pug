@@ -1,0 +1,31 @@
+- let ava = '../images/sprites/png/Layer_1.png'
+- let approved = '../images/sprites/png/Shape_6.png'
+- let avaDefault = true
+- let approvedDefault = true
+- let name = 'Алмаз'
+- let dateBorn = '17.06.1989'
+- let city = 'Казань'
+- let contacts = '89270308087'
+- let flag = true
+
+.block.body-start
+    if avaDefault
+        div
+            img.ava(src=ava, alt=ava, srcset=ava)
+    else
+        div
+            img.ava(src="", alt="", srcset="")
+    form.form(action="/")
+        if flag
+            p #[input(type="text" placeholder=name)]
+            p #[input(type="text" placeholder=dateBorn)]
+            p #[input(type="text" placeholder=city)]
+            p #[input(type="text" placeholder=contacts)]
+        else
+            p #[input(type="text" placeholder="Имя")]
+            p #[input(type="text" placeholder="Дата рождения")]
+            p #[input(type="text" placeholder="Город")]
+            p #[input(type="text" placeholder="Контактные данные")]
+    if approvedDefault
+        .approved
+            img(src=approved, alt=approved, srcset=approved)
